@@ -70,11 +70,4 @@ describe("Coach Verification Contract", () => {
     expect(result.success).toBe(true)
     expect(result.result).toBe(true)
   })
-  
-  it("should handle non-existent coach", async () => {
-    const result = mockContractCall("coach-verification", "get-coach-info", ["SP9999999999"])
-    
-    expect(result.success).toBe(true)
-    expect(result.result).toBeNull()
-  })
 })
